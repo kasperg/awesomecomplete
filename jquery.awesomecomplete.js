@@ -285,9 +285,9 @@
     };
 
 // default functions
-    var defaultRenderFunction = function(dataItem, topMatch, config)
+    var defaultRenderFunction = function(dataItem, topMatch, originalData)
     {
-        if ((topMatch === config.nameField) || (topMatch === null))
+          if ((topMatch === this.nameField) || (topMatch === null))
             return '<p class="title">' + dataItem['name'] + '</p>';
         else
             return '<p class="title">' + dataItem['name'] + '</p>' +
