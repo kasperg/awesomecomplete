@@ -258,7 +258,7 @@
 
         results = results.slice(0, config.resultLimit);
 
-        for (var i in results)
+        for (i = 0; i < results.length; i++)
         {
             $('<li>' + config.renderFunction(results[i].dataItem, results[i].topMatch, results[i].originalDataItem, config) + '</li>')
 				.data('awesomecomplete-dataItem', results[i].originalDataItem)
