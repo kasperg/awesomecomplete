@@ -276,6 +276,10 @@
                            .siblings().removeClass(config.activeItemClass);
                 });
         }
+        
+        if ((config.activateFirst)) {
+          $list.find('li:first').addClass(config.activeItemClass);
+        }
 
         if ((config.noResultsMessage !== undefined) && (results.length == 0))
             $list.append($('<li class="' + config.noResultsClass + '">' + config.noResultsMessage + '</li>'));
@@ -309,6 +313,7 @@
 
     $.fn.awesomecomplete.defaults = {
         activeItemClass: 'active',
+        activateFirst: false,
         attachTo: undefined,
         dataMethod: undefined,
         dontMatch: [],
